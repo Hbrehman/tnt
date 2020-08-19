@@ -6,8 +6,6 @@ const catchAsync = require("./../utils/catchAsync");
 const jwt = require("jsonwebtoken");
 const _ = require("underscore");
 const AppError = require("./../utils/appError");
-// const host_url = "https://tilentaps.com";
-const host_url = "http://127.0.0.1:8080";
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET_KEY, { expiresIn: "24h" });
@@ -32,7 +30,9 @@ const createSendToken = (user, statusCode, res) => {
 
   if (statusCode === 201) {
     res.writeHead(301, {
-      Location: `${host_url}/index.html?user=${user._id}`,
+      Location: `${req.protocol}://${req.get("host")}/index.html?user=${
+        user._id
+      }`,
     });
     return res.end();
   }
@@ -235,7 +235,9 @@ exports.verifyPasswordResetToken = catchAsync(async (req, res, next) => {
   // res.cookie("", , cookieOptions);
 
   res.writeHead(301, {
-    Location: `${host_url}/index.html?passwordResetToken=${resetToken}`,
+    Location: `${req.protocol}://${req.get(
+      "host"
+    )}/index.html?passwordResetToken=${resetToken}`,
   });
   return res.end();
 });
