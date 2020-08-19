@@ -1,0 +1,524 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primary-color: #e57916;
+body {
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+}
+
+#top-nav {
+  background-color: #222;
+  border-bottom: 1px solid rgba($color: #e57916, $alpha: 0.5);
+  font-size: 13px;
+  color: #fff;
+  a {
+    text-decoration: none;
+    color: #e57916;
+  }
+}
+
+header {
+  background-color: #222;
+  border-bottom: 1px solid rgba($color: #e57916, $alpha: 0.5);
+}
+
+nav {
+  background-color: #222;
+
+  a:hover {
+    color: #e57916 !important;
+  }
+  a.active {
+    color: #e57916 !important;
+  }
+}
+
+#faucet {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+#tnpLogo {
+  color: #fff;
+  font-size: 45px;
+  font-family: "Calistoga", cursive;
+
+  // font-family: "Odibee Sans", cursive;
+}
+
+.cart {
+  transition: all 0.5s ease-in-out;
+}
+
+.cart:hover {
+  cursor: pointer;
+  transform: translateX(3px);
+  transition: all 0.3s ease-in-out;
+}
+
+#userPic {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+#qtyNIcon, #userPic {
+  position: relative;
+  #cart-icon {
+    color: #fff;
+    text-align: center;
+    line-height: 48px;
+    min-width: 47px;
+    height: 47px;
+    font-size: 1.2rem;
+    border-radius: 100%;
+    background-color: #e57916;
+  }
+  #cart-qty {
+    background-color: #fff;
+    border-radius: 100%;
+    min-width: 21px;
+    height: 21px;
+    line-height: 22px;
+    font-size: 0.6rem;
+    position: absolute;
+    top: -11px;
+    text-align: center;
+    right: -3px;
+  }
+}
+
+#cart-text, #userInfo {
+  color: #fff;
+
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: -3px;
+  margin-top: 3px;
+}
+
+.carousel-item {
+  height: 448.5px;
+  p {
+    margin-right: 50%;
+  }
+  .btn-outline-danger {
+    outline: none !important;
+    border-color: #222;
+    color: #222;
+  }
+  .btn-outline-danger:hover {
+    color: #fff;
+    // border: #222 !important;
+    background-color: #222 !important;
+  }
+}
+
+.carousel-image-1 {
+  // background: url("https://sonex.com.pk/wp-content/uploads/2017/12/banner2.jpg");
+  background: url("../img/2.jpg");
+  background-size: cover;
+  // background-position: 50% 80%;
+}
+
+.carousel-image-2 {
+  // background: url("https://sonex.com.pk/wp-content/uploads/2017/12/banner3.jpg");
+  background: url("../img/3.jpg");
+  background-size: cover;
+  // background-position: 50% 80%;
+}
+
+.carousel-image-3 {
+  // background: url("https://sonex.com.pk/wp-content/uploads/2017/11/image-1.png");
+  background: url("../img/1.jpg");
+  background-size: cover;
+  // background-position: 50% 100%;
+}
+
+.card {
+  border: 1px solid #656d74;
+  border-radius: 0px;
+  padding: 5px;
+  transition: all 0.3s ease-out;
+  .card-body {
+    padding: 10px 10px 10px 20px !important;
+  }
+  .productType {
+    border-top: 1px dashed #ebebeb;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #656d74;
+  }
+   #per-mtr {
+         font-family: Rubik;
+    font-weight: 500;
+    font-size: 16px;
+   }
+  .card-title,
+  #pro-price
+ {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  // #add-to-cart {
+  // border: 2px solid red;
+  //   border-radius: 0;
+  //   background-color: $primary-color;
+  //   border-color: $primary-color;
+  //   padding: 4px 8px;
+  //   transition: transform 0.2s ease;
+  // }
+  // #add-to-cart:hover {
+  //   transform: translateY(2px);
+  //   transition: transform 0.2s ease;
+  // }
+  .card-img-top {
+    padding: 10px 10px 0px 10px;
+  }
+}
+
+.card:hover {
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+  // transform: scale(1.02, 1.02);
+}
+
+#sanitaryWare-heading,
+#tiles-heading,
+#taps-heading, .prodHeading {
+  background-color: #222;
+}
+
+ 
+
+#sanitaryWare-heading h3,
+#tiles-heading h3,
+#taps-heading h3, .prodHeading h3 {
+  font-size: 2rem !important;
+  font-weight: 200;
+  background-color: #222;
+}
+
+#cartProdList {
+  table,
+  td {
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+#table-body {
+  border-bottom: 2px solid #656d74 !important;
+}
+
+#table-foot {
+  // border-top: 20px solid transparent;
+}
+
+.standard-btn {
+  color: #fff;
+  border-radius: 0;
+  background-color: #e57916;
+  border-color: #e57916;
+  padding: 4px 10px;
+  color: #fff;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.standard-btn:hover {
+  color: #fff;
+  transform: translateY(2px);
+  transition: transform 0.2s ease;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 9999;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1rem 1.5rem;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+.alert--success {
+  background-color: $primary-color;
+}
+.alert--error {
+  background-color: #eb4d4b;
+}
+
+#registerModal .modal-content,
+#loginModal .modal-content, #passwordResetModal .modal-content, #contact-us .modal-content {
+  border-radius: 0px !important;
+  border: none !important;
+  .modal-header {
+    background-color: $primary-color;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .modal-title {
+    letter-spacing: 1px;
+  }
+  .standard-btn {
+    padding: 6px 16px;
+  }
+  #dontAcMsg {
+    font-size: 0.9rem !important;
+  }
+  #lostPass {
+    font-size: 0.9rem;
+  }
+}
+
+#userProfile {
+  #logout-btn {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  padding: 3px 8px;
+  
+
+}
+  transform: none;
+}
+
+#contact {
+  .fa {
+    color: $primary-color;
+  }
+}
+
+
+footer {
+  background-color: #222;
+  width: 100%;
+  color: white;
+  text-align: center;
+  p {
+    margin: 0;
+    font-weight: 100;
+    font-size: 1.3rem;
+  }
+}
+
+.sticky-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+
+
+@media (max-width: 586px) { 
+
+#faucet {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+#tnpLogo {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: "Calistoga", cursive;
+
+  // font-family: "Odibee Sans", cursive;
+}
+
+
+
+#qtyNIcon, #userPic {
+  position: relative;
+  #cart-icon {
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    min-width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 100%;
+    background-color: #e57916;
+  }
+  #cart-qty {
+    background-color: #fff;
+    border-radius: 100%;
+    min-width: 16px;
+    height: 16px;
+    line-height: 18px;
+    font-size: 0.6rem;
+    position: absolute;
+    top: -10px;
+    text-align: center;
+    right: -3px;
+  }
+}
+
+
+
+
+.carousel-image-1 {
+  // background: url("https://sonex.com.pk/wp-content/uploads/2017/12/banner2.jpg");
+  background: url("../img/2.jpg");
+  background-size: cover;
+  background-position: 80% 50%;
+}
+
+.carousel-image-2 {
+  // background: url("https://sonex.com.pk/wp-content/uploads/2017/12/banner3.jpg");
+  background: url("../img/3.jpg");
+  background-size: cover;
+  background-position: 80% 50%;
+}
+
+.carousel-image-3 {
+  // background: url("https://sonex.com.pk/wp-content/uploads/2017/11/image-1.png");
+  background: url("../img/1.jpg");
+  background-size: cover;
+  background-position: 80% 50%;
+}
+
+
+#sanitaryWare-heading h3,
+#tiles-heading h3,
+#taps-heading h3, .prodHeading h3, #heading h3 {
+  font-size: 1rem !important;
+  font-weight: 200;
+  background-color: #222;
+}
+
+.alert {
+  position: fixed;
+  // top: 0;
+  // left: 50%;
+  // -webkit-transform: translateX(-50%);
+  // transform: translateX(-50%);
+  z-index: 9999;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0.9px;
+  font-weight: 400;
+  // text-align: center;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 0.8rem 0.9rem;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+ .carousel-item { 
+   height: 400px;
+    color: #fff;
+  p {
+    // margin-right: 50%;
+    font-size: 0.8rem;
+  }
+  .btn-outline-danger {
+    outline: none !important;
+    border-color: #222;
+    color: #222;
+  }
+  .btn-outline-danger:hover {
+    color: #fff;
+    // border: #222 !important;
+    background-color: #222 !important;
+  }
+ }
+ #userPic {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+#logout-btn {  
+  font-size: 0.7rem !important;
+  letter-spacing: 1px;
+  font-weight: 100;
+  padding: 2px 4px !important;
+}
+
+#cart-text, #userInfo {
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.9px;
+    font-size: 0.7rem;
+    margin-bottom: 0px ;
+    margin-top: 0px ;
+}
+
+.navbar-toggler {
+     padding: .1rem .3rem; 
+     font-size: 1.1rem; 
+     line-height: 1; 
+    background-color: transparent;
+     border: 1px solid  rgba($color: #e57916, $alpha: 0.6) !important; 
+     border-radius: 0em; 
+}
+
+#cartProdList {
+  table,
+  td {
+    font-size: 0.8rem;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+.standard-btn {
+  color: #fff;
+  border-radius: 0;
+  background-color: #e57916;
+  border-color: #e57916;
+  padding: 2px 5px;
+  color: #fff;
+  font-size: 10px;
+  transition: transform 0.2s ease;
+  letter-spacing: 0.5px;
+}
+#reduceByOne {
+  margin-bottom: 5px;
+}
+}
+
+#table-body {
+  border-bottom: 2px solid #656d74 !important;
+}
+
+
+footer {
+
+  p {
+    margin: 0;
+    font-weight: 100;
+    letter-spacing: 1.4px;
+    font-size: 0.8rem;
+  }
+}
+
+.about-footer {
+  position: relative;
+}
+
+
+}
+
+@media (min-width: 586px) { 
+
+.main-navbar {
+  display: flex;
+  #navbarTogglerDemo03 {
+    order: -1;
+  }
+  //   .userProf {
+  //   margin-right: 100px;
+  // } 
+}
+}
