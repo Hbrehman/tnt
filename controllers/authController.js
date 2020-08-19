@@ -13,7 +13,7 @@ const signToken = (id) => {
 
 //, {expiresIn: process.env.JWT_EXPIRES_IN}
 
-const createSendToken = (user, statusCode, res) => {
+const createSendToken = (user, statusCode, req, res) => {
   const token = signToken(user._id);
 
   const cookieOptions = {
@@ -100,7 +100,7 @@ module.exports.redirectAfterVerification = catchAsync(
     const currentUser = await User.findById({ _id: user._id }).select(
       "-verificationToken"
     );
-    createSendToken(currentUser, 201, res);
+    createSendToken(currentUser, 201, req, res);
   }
 );
 
@@ -121,7 +121,7 @@ module.exports.logIn = catchAsync(async (req, res, next) => {
 
   //   user = user.select("-password");
 
-  createSendToken(user, 200, res);
+  createSendToken(user, 200, req, res);
 });
 
 module.exports.protect = catchAsync(async (req, res, next) => {
@@ -265,7 +265,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   user.passwordResetTokenExpire = undefined;
   await user.save();
   res.cookie("passwordResetToken", "", { httpOnly: false });
-  createSendToken(user, 200, res);
+  createSendToken(user, 200, req, res);
 });
 
 exports.updatePassword = catchAsync(async (req, res, next) => {
@@ -279,7 +279,7 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 
   await user.save();
 
-  createSendToken(user, 200, res);
+  createSendToken(user, 200, req, res);
 });
 
 exports.restrictTo = (...roles) => {
