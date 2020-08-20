@@ -93,7 +93,7 @@ app.use(compression());
 
 app.all("*", (req, res, next) => {
   var origin = req.protocol + "://" + req.get("host") + req.originalUrl;
-  console.log(fullUrl);
+  console.log(origin);
   // var origin = req.get("origin");
   // var origin = req.headers.origin;
   // console.log(origin, "origin");
