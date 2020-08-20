@@ -1,6 +1,7 @@
 const userProfile = document.getElementById("userProfile");
 const userImg = document.querySelector("#userProfile img");
 const username = document.querySelector(".username");
+import { staticAssetsUrl } from "./config";
 
 import { url } from "./config";
 
@@ -35,7 +36,10 @@ async function findUser(userId) {
 }
 
 function updateUserOnUI(user) {
-  $("#userProfile img").attr("src", `${url}img/users/${user.photo}`);
+  $("#userProfile img").attr(
+    "src",
+    `${staticAssetsUrl}img/users/${user.photo}`
+  );
   username.textContent = user.name;
   document.getElementById("userPic").removeAttribute("hidden");
   document.getElementById("userInfo").removeAttribute("hidden");
