@@ -92,8 +92,8 @@ if (process.env.NODE_ENV === "development") {
 app.use(compression());
 
 app.all("*", (req, res, next) => {
-  // var origin = req.protocol + "://" + req.get("host") + req.originalUrl;
-  // console.log(fullUrl);
+  var origin = req.protocol + "://" + req.get("host") + req.originalUrl;
+  console.log(fullUrl);
   // var origin = req.get("origin");
   // var origin = req.headers.origin;
   // console.log(origin, "origin");
