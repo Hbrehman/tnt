@@ -2,7 +2,7 @@ import { url } from "./../utils/config";
 import { staticAssetsUrl } from "./../utils/config";
 
 import axios from "axios";
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 
 // import "js-cookie";
 import "bootstrap";
