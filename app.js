@@ -17,17 +17,21 @@ const userRouter = require("./routes/userRoutes");
 const productRouter = require("./routes/productRoutes");
 const orderRouter = require("./routes/orderRoutes");
 
-// app.enable("trust proxy");
 // Set static folder
 app.use(express.static("client/dist"));
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
 });
+/*
 if (process.env.NODE_ENV === "production") {
   // Serve static assets if in production
 
   // For production Environment
-  var whitelist = ["https://tilentaps.com", "https://admin.tilentaps.com"];
+  var whitelist = [
+    "https://tilentaps.com",
+    "https://admin.tilentaps.com",
+    "https://tnt-hb.herokuapp.com",
+  ];
   var corsOptionsDelegate = function (req, callback) {
     var corsOptions;
     if (whitelist.indexOf(req.header("Origin")) !== -1) {
@@ -48,7 +52,7 @@ if (process.env.NODE_ENV === "production") {
     })
   );
 }
-
+*/
 // Cookie parser
 app.use(cookieParser());
 
