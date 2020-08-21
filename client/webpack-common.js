@@ -10,6 +10,7 @@ module.exports = {
     about: "./src/utils/about.js",
     contact: "./src/utils/contact.js",
     outlets: "./src/utils/outlets.js",
+    profile: "./src/utils/profile.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -59,6 +60,12 @@ module.exports = {
       inject: true,
       chunks: ["outlets"],
       filename: "outlets.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/profile.html",
+      inject: true,
+      chunks: ["profile"],
+      filename: "profile.html",
     }),
   ],
 };

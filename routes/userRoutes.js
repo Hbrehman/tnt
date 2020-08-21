@@ -27,8 +27,8 @@ router
 
 router.put(
   "/updateUser/:id",
-  authController.protect,
-  authController.restrictTo("admin"),
+  // authController.protect,
+  // authController.restrictTo("admin"),
   userController.uploadProfilePic,
   userController.resizeUserPhoto,
   userController.updateUser

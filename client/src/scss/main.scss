@@ -319,6 +319,145 @@ footer {
 }
 
 
+#user-menu {
+  #menu-side {
+  background: rgb(34,34,34);
+
+  ul {
+    margin: 0;
+    padding: 0;
+     li {
+        list-style-type: none;
+        padding: 5px 80px;
+        margin: 10px 0px;
+        transition: all 0.3s ease;
+        background: none;
+    .fas {
+      font-size: 1.2rem;
+    }
+    a {
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 100;
+      display: flex;
+      align-items: center;
+    }
+
+  }
+    .menu-side-active{
+        border-left: 4px solid #fff;
+        a {
+          color: $primary-color !important;
+        }
+        }
+      li:hover {
+        border-left: 4px solid #fff;
+        transition: all 0.3s ease;
+        a {
+          color: $primary-color;
+          transform: translateX(4px);
+        }
+      }
+  }
+ 
+  }
+
+#settings-side {
+  padding-left: 13% !important;
+  padding-right: 13% !important;
+  label[for="name"], label[for="email"], label[for="currentPassword"], label[for="newPassword"], , label[for="confirmPassword"]  {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(119, 119,119);
+    display: block;
+    
+  }
+  input[id="name"], input[id="email"], input[type="password"] {
+    border: none;
+    background: #eee;
+    padding: 10px 15px;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: rgb(30, 30,30);
+    font-weight: 100;
+    width: 90%;
+    margin-bottom: 25px;
+
+  }
+  input[id="name"]:focus, input[id="email"]:focus,, input[type="password"]:focus {
+    outline: none;
+  }
+
+  .form__photo-upload {
+    img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      margin-right: 1.2rem;
+    }
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+    label {
+      // color: rgb(119, 119,119);
+      color: $primary-color;
+      display: inline-block;
+      text-decoration: none;
+      // border-bottom: 1px solid rgb(119, 119,119);
+      border-bottom: 1px solid $primary-color;
+      padding: 3px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .form__upload + label:hover {
+      // background-color: rgb(119, 119,119);
+      background-color: $primary-color;
+      color: #fff;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+    }
+  }
+
+  .btn--small {
+    display: flex;
+    margin-left: auto;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    margin-right: 10%;
+    // background-color: rgb(34,34,34);
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: 0px;
+    border: none;
+    padding: 7px 15px;
+    transition: 0.3s ease all;
+  }
+  .btn--small:focus {
+    outline: none;
+    border: none;
+    border-radius: none;
+  }
+  .btn--small:hover {
+    transform: translateY(3px);
+    transition: 0.3s ease all;
+  } 
+
+#passwordChange {
+  border-top: 1px dotted #ccc;
+  padding-top: 40px;
+}
+
+}  
+}
+
+
 
 @media (max-width: 586px) { 
 

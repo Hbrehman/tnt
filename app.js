@@ -17,10 +17,16 @@ const userRouter = require("./routes/userRoutes");
 const productRouter = require("./routes/productRoutes");
 const orderRouter = require("./routes/orderRoutes");
 
-// Set static folder
+// Set static folder for client
 app.use(express.static("client/dist"));
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
+});
+
+// Set static folder for dashboard
+app.use(express.static("dashboard/dist"));
+app.get("/admin", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "dashboard", "dist", "index.html"));
 });
 /*
 if (process.env.NODE_ENV === "production") {

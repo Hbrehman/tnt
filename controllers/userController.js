@@ -68,14 +68,23 @@ exports.updateUser = catchAsync(async (req, res, next) => {
     photo = req.file.filename;
   }
   if (photo) {
-    user = await User.findByIdAndUpdate(userId, {
-      photo,
-      ..._.pick(req.body, ["name", "email", "password", "passwordConfirm"]),
-    });
+    user = await User.findByIdAndUpdate(
+      userId,
+      {
+        photo,
+        ..._.pick(req.body, ["name", "email"]),
+      },
+      {
+        new: true,
+      }
+    );
   } else {
     user = await User.findByIdAndUpdate(
       userId,
-      _.pick(req.body, ["name", "email", "password", "passwordConfirm"])
+      _.pick(req.body, ["name", "email"]),
+      {
+        new: true,
+      }
     );
   }
 
@@ -145,18 +154,39 @@ exports.updateMe = catchAsync(async (req, res, next) => {
     );
   }
 
-  const updatedUser = await User.findByIdAndUpdate(
-    req.user._id,
-    _.pick(req.body, ["name", "email"]),
-    {
-      new: true,
-      runValidators: true,
-    }
-  );
+  const userId = req.user._id;
+  let photo;
+  let user;
+  if (req.file) {
+    photo = req.file.filename;
+  }
+  if (photo) {
+    user = await User.findByIdAndUpdate(
+      userId,
+      {
+        photo,
+        ..._.pick(req.body, ["name", "email"]),
+      },
+      {
+        new: true,
+      }
+    );
+  } else {
+    user = await User.findByIdAndUpdate(
+      userId,
+      _.pick(req.body, ["name", "email"]),
+      {
+        new: true,
+      }
+    );
+  }
+
+  console.log(user);
 
   res.status(200).json({
     status: "success",
-    data: updatedUser,
+    message: "User updated successfully...",
+    data: user,
   });
 });
 

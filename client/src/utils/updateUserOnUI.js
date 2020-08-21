@@ -12,6 +12,12 @@ export function updateUserOnUI() {
     userPic.removeAttribute("hidden");
     userInfo.removeAttribute("hidden");
     welcomeMsg.setAttribute("hidden", true);
+        [userPic, username].forEach(el=>{
+      el.addEventListener('click', ()=> {
+        console.log('hello world');
+        window.location.href = 'profile.html'
+      })
+    })
     return true;
   } else {
     userPic.setAttribute("hidden", true);
