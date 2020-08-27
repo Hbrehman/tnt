@@ -43,7 +43,7 @@ window.addEventListener('load', (e)=> {
 
 coverImage.setAttribute('src', `${staticAssetsUrl}/img/products/${prodDetail.imageCover}`)
     const markup = `<h5 class="display-5" id="prod-title">${prodDetail.name}</h5>
-              <span id="prod-price"> Rs ${prodDetail.price} per meter </span>
+              <span id="prod-price"> Rs ${prodDetail.price} </span>
               <div id="prod-details">
                   <div id="key">
                       <h6>Company :</h6>
