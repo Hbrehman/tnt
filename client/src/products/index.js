@@ -77,10 +77,14 @@ export function displayProducts(element, data) {
       <div class="card-body">
         <h6 class="productType mb-1">${el.type}</h6>
         <h5 class="card-title mb-1 mt-3">${el.name}</h5>
+         <span id="pro-price"> ${el.price} RS</span>
       </div>
       
          <div class="d-flex align-items-center">
-         <span id="pro-price"> ${el.price} RS</span>
+          <button id="view-details"  data-el='${JSON.stringify(
+           el
+         )}' class=" standard-btn btn ml-auto">View Details</button>
+
          <button id="add-to-cart"  data-el='${JSON.stringify(
            el
          )}' class=" standard-btn btn ml-auto">Add to cart</button>
@@ -147,3 +151,17 @@ function getParameterByName(name, url) {
   if (!results[2]) return "";
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+const prodParentEls = document.querySelectorAll(".prodParent");
+prodParentEls.forEach(el=> {
+  el.addEventListener('click', (e)=> {
+    e.preventDefault();
+    if (e.target.id === "view-details") {
+      const product = JSON.parse(
+        e.target.attributes.getNamedItem("data-el").value
+      );
+      localStorage.setItem('prod-detail', JSON.stringify(product));
+      window.location.href = "prodDetail.html";
+    }
+})
+})

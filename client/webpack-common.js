@@ -11,6 +11,7 @@ module.exports = {
     contact: "./src/utils/contact.js",
     outlets: "./src/utils/outlets.js",
     profile: "./src/utils/profile.js",
+    prodDetail: "./src/utils/prodDetail.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -66,6 +67,12 @@ module.exports = {
       inject: true,
       chunks: ["profile"],
       filename: "profile.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/prodDetail.html",
+      inject: true,
+      chunks: ["prodDetail"],
+      filename: "prodDetail.html",
     }),
   ],
 };

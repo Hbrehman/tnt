@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | tileNtaps</title>
+    <link
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Calistoga&family=Odibee+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900,300italic,400italic,500italic,700italic,900italic"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+  </head>
+  <body style="background-color: #eee !important;">
+    <nav id="top-nav" class="py-2">
+      <div class="container d-flex">
+        <div id="welcomeMsg">
+          Hi Customer -
+          <a
+            href="javascript:void(0)"
+            data-toggle="modal"
+            data-target="#loginModal"
+          >
+            Login
+          </a>
+          or
+          <a
+            href="javascript:void(0)"
+            data-toggle="modal"
+            data-target="#registerModal"
+            >Register</a
+          >
+        </div>
+        <div id="contact" class="ml-auto d-none d-md-block contact-info">
+          <div class="row">
+            <span class="mr-4">
+              <i class="fa fa-phone"></i> &nbsp; Phone: 923189831129
+            </span>
+            <span>
+              <i class="fa fa-envelope"></i> &nbsp; Email: contact@tilentaps.com
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-4">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-xs-4 d-flex justify-content-start align-items-center">
+            <img class="mr-2" id="faucet" src="./img/faucet.png" alt="" />
+            <span id="tnpLogo">tileNtaps</span>
+          </div>
+
+          <div
+            class="col-xs-8 ml-auto d-flex justify-content-end align-items-center"
+          >
+            <div
+              id="cart-info"
+              class="cart d-flex justify-content-end align-items-center"
+            >
+              <div id="qtyNIcon">
+                <div id="cart-icon"><i class="fas fa-cart-plus"></i></div>
+                <div id="cart-qty">0</div>
+              </div>
+              <div id="cart-text" class="ml-2">
+                <div id="myCart">My Cart</div>
+                <div id="cart-price">Rs. <span id="price">0</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm navbar-dark main-navbar">
+      <div class="container p-0">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo03"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="d-flex justify-content-end align-items-center userProf">
+          <div
+            id="userProfile"
+            class="cart d-flex justify-content-center align-items-center"
+          >
+            <div id="userPic" hidden>
+              <div>
+                <img
+                  class="img-fluid rounded-circle"
+                  src="./img/user.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div id="userInfo" hidden class="ml-2">
+              <div id="myCart" class="username">User Name</div>
+              <div class="mb-1">
+                <button id="logout-btn" class="btn standard-btn">
+                  Logout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./tiles.html">Tiles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./taps.html">Taps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./sanitaryWare.html"
+                >Sanitary Ware</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./outlets.html">Our Outlets</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- product information -->
+
+    <section class="my-5" id="prodDetail">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-sm-5">
+          <div id="product-coverImg">
+            <img class="img-fluid" src="./img/smapletile (1).jpg" alt=""/>
+          </div>
+                    <div id="product-images">
+            <div id="prod-img">
+                <img class="img-fluid prod-images" src="./img/smapletile (1).jpg" alt=""/>
+                
+            </div>
+            <div id="prod-img">
+                <img class="img-fluid prod-images" src="./img/smapletile (1).jpg" alt=""/>
+                
+            </div>
+            <div id="prod-img">
+                <img class="img-fluid prod-images" src="./img/smapletile (1).jpg" alt=""/>
+                
+            </div>
+          </div>
+          </div>
+          <div class="col-sm-7 bg-light prodParent">
+            <div id="prod-info">
+              <!-- <h5 class="display-5" id="prod-title">Product Title</h5>
+              <span id="prod-price"> Rs 500 per meter </span>
+              <div id="prod-details">
+                  <div id="key">
+                      <h6>Description :</h6>
+                  </div>
+                  <div id="value" ><span>a quick brown fox jumps over the lazy dog a quick brown fox jumps over the lazy dog a quick brown fox jumps over the lazy dog a quick brown fox jumps over the lazy dog a quick brown fox jumps over the lazy dog a quick brown fox jumps over the lazy dog </span></div>
+              </div>
+              <button id="add-to-cart" class="btn">Add to Cart</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register Modal -->
+
+    <div class="modal fade" id="registerModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header text-white">
+            <h5 class="modal-title">Register</h5>
+            <button class="close close-registerModal" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="RegUserName">Name</label>
+                <input
+                  id="RegUserName"
+                  type="text"
+                  class="form-control"
+                  placeholder="Name"
+                  required
+                  minlength="3"
+                />
+              </div>
+              <div class="form-group">
+                <label for="RegUserEmail">Email</label>
+                <input
+                  id="RegUserEmail"
+                  type="text"
+                  class="form-control"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="RegUserPassword">Password</label>
+                <input
+                  id="RegUserPassword"
+                  type="password"
+                  class="form-control"
+                  placeholder="••••••••"
+                  required
+                  minlength="6"
+                  maxlength="255"
+                />
+              </div>
+              <div class="form-group">
+                <label for="RegUserPasswordCnfrm">Confirm Password</label>
+                <input
+                  id="RegUserPasswordCnfrm"
+                  type="password"
+                  class="form-control"
+                  placeholder="••••••••"
+                  required
+                  minlength="6"
+                  maxlength="255"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="BtnRegisterUser" class="btn standard-btn mb-3 mr-3">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+
+    <div class="modal fade" id="loginModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header text-white">
+            <h5 class="modal-title">Login</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="userEmailLogin">Email</label>
+                <input
+                  id="userEmailLogin"
+                  type="text"
+                  class="form-control"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="userPasswordLogin">Password</label>
+                <input
+                  id="userPasswordLogin"
+                  type="password"
+                  class="form-control"
+                  placeholder="••••••••"
+                  required
+                  minlength="6"
+                  maxlength="255"
+                />
+              </div>
+
+              <div>
+                <a class="pl-2" id="lostPass" href="javascript:void(0)"
+                  >Lost Your Password?</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer justify-content-start">
+            <div>
+              <span class="text-muted pl-2" id="dontAcMsg"
+                >Don't have an account?</span
+              >
+              <a id="signUpLink" href="javascript:void(0)">SignUp here</a>
+            </div>
+            <button id="BtnLoginUser" class="btn standard-btn ml-auto mr-3">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- password reset modal -->
+
+    <div class="modal fade" id="passwordResetModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header text-white">
+            <h5 class="modal-title">Reset Password</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="passwordReset">Password</label>
+                <input
+                  id="passwordReset"
+                  type="password"
+                  class="form-control"
+                  placeholder="••••••••"
+                  required
+                  minlength="6"
+                  maxlength="255"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="passwordConfirmReset">Confirm Password</label>
+                <input
+                  id="passwordConfirmReset"
+                  type="password"
+                  class="form-control"
+                  placeholder="••••••••"
+                  required
+                  minlength="6"
+                  maxlength="255"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer justify-content-start">
+            <button
+              id="BtnUpdatePassword"
+              class="btn standard-btn ml-auto mr-3"
+            >
+              Update Password
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- constact us modal -->
+
+    <div class="modal fade" id="contact-us">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header text-white">
+            <h5 class="modal-title">Contact Us</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>To Purchase this item contact us at</p>
+            <p class="ml-5">Phone: 923189831129</p>
+          </div>
+          <div class="modal-footer justify-content-start">
+            <a href="outlets.html" class="btn standard-btn ml-auto mr-3">
+              Visit Out Outlets
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="py-4">
+      <p class="display-5 text-white">copyright@2020 tileNtaps.com</p>
+    </footer>
+  </body>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+</html>
+
+
