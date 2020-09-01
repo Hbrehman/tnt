@@ -9,4 +9,5 @@ router.post(
   orderController.getCheckoutSession
 );
 
+router.get("/", orderController.getOrders);
 module.exports = router;

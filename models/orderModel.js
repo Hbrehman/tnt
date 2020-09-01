@@ -7,11 +7,12 @@ const orderSchema = new mongoose.Schema({
   },
   user: {
     type: mongoose.Schema.ObjectId,
-    ref: "User",
+    ref: "user",
     required: [true, "Order must belong to a User"],
   },
   cart: {
     type: mongoose.Schema.ObjectId,
+    ref: "Cart",
     required: [true, "Order must have shopping cart"],
   },
   totalPrice: {

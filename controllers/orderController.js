@@ -31,6 +31,18 @@ module.exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   });
 });
 
+// Get all order to dispaly on dashboard
+exports.getOrders = catchAsync(async (req, res, next) => {
+  const orders = await Order.find()
+    .populate("user", "name email photo")
+    .populate("cart");
+
+  res.status(200).json({
+    status: "success",
+    data: orders,
+  });
+});
+
 exports.webhookCheckout = (req, res, next) => {
   let event;
   const signature = req.headers["stripe-signature"];
@@ -74,3 +86,8 @@ async function createBookingCehckout(session) {
   });
   console.log(order);
 }
+
+// {"_id":{"$oid":"5ec0f891df1cda0004042438"},"cart":{"$oid":"5ec0f870df1cda0004042437"},"user":{"$oid":"5eb7551dc716405f7276563c"},"deliveryAddress":{"city":"Bhalwal","country":"PK","line1":"one","line2":"two","postal_code":"40410","state":""},"totalPrice":{"$numberInt":"31000"},"name":"hbrehman","__v":{"$numberInt":"0"}}
+
+// hbrehman id 5eaaae1b5cf98d2b509e5431
+// sajid id 5eb1bb7b6268802b2c6b7e4c
